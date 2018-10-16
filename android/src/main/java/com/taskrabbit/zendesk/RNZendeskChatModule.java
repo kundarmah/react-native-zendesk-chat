@@ -88,7 +88,7 @@ public class RNZendeskChatModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void endChat() {
-        // Activity activity = getCurrentActivity();
-        // activity.onBackPressed();
+        Activity activity = getCurrentActivity();
+        activity.this.finish();
     }
 }
