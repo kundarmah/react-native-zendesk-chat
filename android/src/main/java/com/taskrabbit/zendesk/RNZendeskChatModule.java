@@ -90,7 +90,7 @@ public class RNZendeskChatModule extends ReactContextBaseJavaModule {
     public void endChat() {
         Activity activity = getCurrentActivity();
         if (activity != null) {
-            getActivity().finish();
+            activity.finish();
         } 
     }
 }
