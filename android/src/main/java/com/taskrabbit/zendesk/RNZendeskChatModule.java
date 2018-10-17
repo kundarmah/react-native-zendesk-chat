@@ -42,6 +42,9 @@ public class RNZendeskChatModule extends ReactContextBaseJavaModule {
         if (options.hasKey("phone")) {
             builder.phoneNumber(options.getString("phone"));
         }
+        if (options.hasKey("tags")) {
+            builder.tags(options.getString("tags"));
+        }
         VisitorInfo visitorData = builder.build();
         ZopimChat.setVisitorInfo(visitorData);
     }
