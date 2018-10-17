@@ -50,7 +50,7 @@ public class RNZendeskChatModule extends ReactContextBaseJavaModule {
         }
         VisitorInfo visitorData = builder.build();
         ZopimChat.setVisitorInfo(visitorData);
-        chat.send("A message");
+        ChatApi.send("A message");
     }
 
     @ReactMethod
