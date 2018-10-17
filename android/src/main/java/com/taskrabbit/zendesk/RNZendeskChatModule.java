@@ -12,6 +12,7 @@ import com.zopim.android.sdk.api.ZopimChat;
 import com.zopim.android.sdk.model.VisitorInfo;
 import com.zopim.android.sdk.prechat.ZopimChatActivity;
 import com.zopim.android.sdk.prechat.PreChatForm;
+import com.zopim.android.sdk.api.ChatApi;
 
 
 import java.lang.String;
@@ -43,17 +44,13 @@ public class RNZendeskChatModule extends ReactContextBaseJavaModule {
             builder.phoneNumber(options.getString("phone"));
         }
         if (options.hasKey("tags")) {
-            PreChatForm preChatForm = new PreChatForm.Builder()
-            .message("Hey @visitor_name, use this chat to let us know how we can help you and we will take care of the rest.")
-            .build();
-
             ZopimChat.init("5sfLCtINlkDxY4CaDK2L2Fw4gABcpI67")
             .tags("request")
-            .preChatForm(preChatForm)
             .build();
         }
         VisitorInfo visitorData = builder.build();
         ZopimChat.setVisitorInfo(visitorData);
+        chat.send("A message");
     }
 
     @ReactMethod
