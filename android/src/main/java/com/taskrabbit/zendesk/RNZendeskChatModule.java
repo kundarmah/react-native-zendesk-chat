@@ -89,6 +89,7 @@ public class RNZendeskChatModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void setPushToken(String token) {
+        Toast.makeText(getApplicationContext(), token, Toast.LENGTH_LONG).show();
         ZopimChat.setPushToken(token);
     }
 
