@@ -14,6 +14,7 @@ import com.zopim.android.sdk.prechat.ZopimChatActivity;
 import com.zopim.android.sdk.prechat.PreChatForm;
 import com.zopim.android.sdk.api.ChatApi;
 
+import android.widget.Toast;
 
 import java.lang.String;
 
