@@ -14,7 +14,6 @@ import com.zopim.android.sdk.prechat.ZopimChatActivity;
 import com.zopim.android.sdk.prechat.PreChatForm;
 import com.zopim.android.sdk.api.ChatApi;
 
-import android.widget.Toast;
 
 import java.lang.String;
 
@@ -90,7 +89,6 @@ public class RNZendeskChatModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void setPushToken(String token) {
-        Toast.makeText(getApplicationContext(), token, Toast.LENGTH_LONG).show();
         ZopimChat.setPushToken(token);
     }
 
